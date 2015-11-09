@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="float:left; width:40%; border:2px solid red;">
+        <form method="post" action="" />
+            {% csrf_token %}
+            {{ forms.comment.as_ul }}
+            <input type="submit" name="{{ submit_names.comment }}" value="Go" />
+        </form>
+    </div>
+    <div style="float:right; width:40%; border:2px solid blue;">
+        <form method="post" action="" />
+            {% csrf_token %}
+            {{ forms.request.as_ul }}
+            <input type="submit" name="{{ submit_names.request }}" value="Go" />
+        </form>
+    </div>
+    <div style="clear:both;"></div>
+{% endblock content %}
