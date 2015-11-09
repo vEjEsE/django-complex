@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="border:2px solid red;">
+        <form method="post" action="" />
+            {% csrf_token %}
+            {{ forms.register.as_ul }}
+            {{ forms.comment.as_ul }}
+            <input type="submit" name="submit" value="Go" />
+        </form>
+    </div>
+    <div style="clear:both;"></div>
+{% endblock content %}

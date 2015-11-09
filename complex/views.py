@@ -30,6 +30,7 @@ class MultipleFormsKwargsMixin(object):
             }
         return {}
 
+
 class MultiFormKwargsMixin(MultipleFormsKwargsMixin):
 
     def get_form_kwargs(self, name):
